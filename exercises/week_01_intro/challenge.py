@@ -28,8 +28,16 @@ import math  # noqa: F401
 #    print(f"Net USD: ${net_usd:.2f}")
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 1 below:
+euros = float(input("Enter amount in EUR: "))
+rate = float(input("Enter exchange rate (EUR TO USD): "))
 
+gross_usd = euros * rate 
+fee = gross_usd * 0.02
+net_usd = gross_usd - fee
 
+print(f"Gross USD: ${gross_usd:.2f}")
+print(f"Fee: ${fee:.2f}")
+print(f"Net USD: ${net_usd:.2f}")
 # ------------------------------------------------------------------------------
 # Challenge 2: Pizza Party Slices & Leftovers
 # You are hosting a computer science pizza party!
@@ -51,8 +59,17 @@ import math  # noqa: F401
 #    print(f"Leftover slices: {leftover_slices}")
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 2 below:
+students = int(input("Enter number of students: "))
+pizzas = int(input("Enter number of pizzas: "))
+slices_per_pizza = int(input("Enter slices per pizza: "))
 
+total_slices = pizzas * slices_per_pizza
+slices_per_student = total_slices // students
+leftover_slices = total_slices % students
 
+print(f"Total slices: {total_slices}")
+print(f"Slices per student: {slices_per_student}")
+print(f"Leftover slices: {leftover_slices}")
 # ------------------------------------------------------------------------------
 # Challenge 3: Sphere Geometry (Volume & Surface Area)
 # Think Python Exercise 2.2:
